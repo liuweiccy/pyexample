@@ -16,3 +16,5 @@ print(fmt.format("Apple Phone", 999))
 print(fmt.format("Beer (4L)", 40))
 print(fmt.format("Meat (5kg * 2)", 29.99))
 print('=' * width)
+
+"".translate()
