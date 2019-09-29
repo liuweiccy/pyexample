@@ -26,11 +26,26 @@ def store(data, full_name):
             data[label][name] = [full_name]
 
 
+def store2(data, *full_names):
+    """
+    多参数玩家名字存储
+
+    :param data: 存储姓名的数据结构
+    :param full_names: 输入的一系列玩家的名字
+    :return: None
+    """
+    for full_name in full_names:
+        store(data, full_name)
+
+
 storage = {}
 init(storage)
+'''
 store(storage, "Liu Wei")
 store(storage, "Liu Yu Xin")
 store(storage, "Liu De Hua")
+'''
+store2(storage, "Liu Wei", "Liu De Hua", "Liu Yu Xin")
 v = lookup(storage, 'first', 'Liu')
 print(v)
 
